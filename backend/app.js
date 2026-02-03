@@ -15,7 +15,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",          
-      "https://your-frontend.vercel.app" 
+      "https://mern-product-management-frontend-9nxsnebbw.vercel.app" 
     ],
     credentials: true
   })
