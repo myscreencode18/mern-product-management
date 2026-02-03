@@ -8,8 +8,19 @@ import productRoutes from "./routes/product.routes.js";
 const app = express();
 
 app.use(express.json());
-app.use(cors());
+
 app.use(helmet());
+
+app.use(
+  cors({
+    origin: [
+      "http://localhost:5173",          
+      "https://your-frontend.vercel.app" 
+    ],
+    credentials: true
+  })
+);
+
 
 app.use("/api/admin", adminAuthRoutes);
 app.use("/api/products", productRoutes);
