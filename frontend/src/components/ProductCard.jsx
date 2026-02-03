@@ -54,7 +54,7 @@ const ProductCard = ({ product }) => {
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    overflow: "hidden", // important
+    overflow: "hidden", 
     background:
       "radial-gradient(circle at bottom, #f1f3f5 0%, #ffffff 70%)",
   }}

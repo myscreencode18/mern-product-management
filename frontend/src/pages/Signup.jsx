@@ -15,12 +15,12 @@ const Signup = () => {
     try {
       await api.post("/admin/signup", form);
       alert("Admin created successfully");
-      navigate("/login"); // redirect to login after creation
+      navigate("/login"); 
     } catch (err) {
-      // Backend returns 403 if admin exists
+     
       if (err.response?.status === 403) {
         alert("Admin already exists. Kindly login with your admin credentials.");
-        navigate("/login"); // redirect to login page
+        navigate("/login"); 
       } else {
         alert(err.response?.data?.message || "Signup failed");
       }
