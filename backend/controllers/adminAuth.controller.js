@@ -7,7 +7,7 @@ import jwt from "jsonwebtoken";
  */
 export const adminSignup = async (req, res) => {
   try {
-    // Check if admin already exists
+    
     const adminCount = await Admin.countDocuments();
 
     if (adminCount > 0) {
